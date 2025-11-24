@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epicure Express - Accueil</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gradient-to-br from-orange-50 to-amber-100 min-h-screen">
+    <custom-header></custom-header>
+    
+    <main class="container mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <section class="text-center py-16">
+            <h1 class="text-5xl md:text-7xl font-bold text-amber-800 mb-6">Epicure Express</h1>
+            <p class="text-xl md:text-2xl text-gray-700 mb-8 max-w-2xl mx-auto">
+                Découvrez une expérience culinaire exceptionnelle où chaque plat raconte une histoire
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="menu.html" class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition duration-300 transform hover:scale-105 shadow-lg">
+                    Voir Notre Menu
+                </a>
+                <button class="border-2 border-amber-600 text-amber-700 hover:bg-amber-600 hover:text-white px-8 py-4 rounded-full text-lg font-semibold transition duration-300">
+                    Réserver une Table
+                </button>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="star" class="text-amber-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Ingrédients Frais</h3>
+                    <p class="text-gray-600">Nos produits sont sélectionnés quotidiennement auprès de producteurs locaux</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="users" class="text-amber-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Chefs Expérimentés</h3>
+                    <p class="text-gray-600">Nos chefs passionnés créent des plats uniques avec amour et expertise</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="clock" class="text-amber-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Service Rapide</h3>
+                    <p class="text-gray-600">Commandez et savourez dans un délai record sans compromis qualité</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specials Preview -->
+        <section class="py-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Nos Spécialités</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="http://static.photos/food/640x360/1" alt="Plat spécial 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Risotto aux Truffes</h3>
+                        <p class="text-gray-600 mb-4">Un délicieux risotto crémeux aux truffes noires fraîches</p>
+                        <span class="text-amber-600 font-bold text-lg">28€</span>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="http://static.photos/food/640x360/2" alt="Plat spécial 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Saumon Teriyaki</h3>
+                        <p class="text-gray-600 mb-4">Filet de saumon mariné sauce teriyaki, riz basmati</p>
+                        <span class="text-amber-600 font-bold text-lg">32€</span>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="http://static.photos/food/640x360/3" alt="Plat spécial 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Tiramisu Maison</h3>
+                        <p class="text-gray-600 mb-4">Notre fameux tiramisu préparé selon la recette traditionnelle</p>
+                        <span class="text-amber-600 font-bold text-lg">12€</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+</body>
+</html>
