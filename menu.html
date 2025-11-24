@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epicure Express - Menu</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gradient-to-br from-orange-50 to-amber-100 min-h-screen">
+    <custom-header></custom-header>
+    
+    <main class="container mx-auto px-4 py-8">
+        <!-- Menu Header -->
+        <section class="text-center py-12">
+            <h1 class="text-4xl md:text-6xl font-bold text-amber-800 mb-4">Notre Menu</h1>
+            <p class="text-xl text-gray-700 max-w-2xl mx-auto">
+                Découvrez notre sélection soigneusement élaborée de plats qui éveilleront vos papilles
+            </p>
+        </section>
+
+        <!-- Menu Categories -->
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+            <button class="category-btn active bg-amber-600 text-white px-6 py-3 rounded-full font-semibold transition duration-300" data-category="entrees">
+                Entrées
+            </button>
+            <button class="category-btn bg-amber-100 text-amber-700 px-6 py-3 rounded-full font-semibold hover:bg-amber-200 transition duration-300" data-category="plats">
+                Plats Principaux
+            </button>
+            <button class="category-btn bg-amber-100 text-amber-700 px-6 py-3 rounded-full font-semibold hover:bg-amber-200 transition duration-300" data-category="desserts">
+                Desserts
+            </button>
+            <button class="category-btn bg-amber-100 text-amber-700 px-6 py-3 rounded-full font-semibold hover:bg-amber-200 transition duration-300" data-category="boissons">
+                Boissons
+            </button>
+        </div>
+
+        <!-- Menu Items -->
+        <div class="menu-content">
+            <!-- Entrées -->
+            <div class="menu-category active" id="entrees">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Nos Entrées</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-2xl shadow-lg p-6 transform hover:scale-105 transition duration-300">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Salade César</h3>
+                            <span class="text-amber-600 font-bold text-lg">14€</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Laitue romaine, croûtons, parmesan et notre sauce césar maison</p>
+                        <img src="http://static.photos/food/320x240/4" alt="Salade César" class="w-full h-40 object-cover rounded-lg">
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 transform hover:scale-105 transition duration-300">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Carpaccio de Bœuf</h3>
+                            <span class="text-amber-600 font-bold text-lg">16€</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Fine tranches de bœuf, roquette, copeaux de parmesan, huile d'olive</p>
+                        <img src="http://static.photos/food/320x240/5" alt="Carpaccio" class="w-full h-40 object-cover rounded-lg">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plats Principaux -->
+            <div class="menu-category hidden" id="plats">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Plats Principaux</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-2xl shadow-lg p-6 transform hover:scale-105 transition duration-300">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Filet Mignon</h3>
+                            <span class="text-amber-600 font-bold text-lg">38€</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Filet mignon de porc, sauce au poivre vert, purée maison</p>
+                        <img src="http://static.photos/food/320x240/6" alt="Filet Mignon" class="w-full h-40 object-cover rounded-lg">
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 transform hover:scale-105 transition duration-300">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Poulet Rôti</h3>
+                            <span class="text-amber-600 font-bold text-lg">26€</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Poulet fermier rôti aux herbes de Provence, légumes de saison</p>
+                        <img src="http://static.photos/food/320x240/7" alt="Poulet Rôti" class="w-full h-40 object-cover rounded-lg">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desserts -->
+            <div class="menu-category hidden" id="desserts">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Desserts</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-2xl shadow-lg p-6 transform hover:scale-105 transition duration-300">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Fondant au Chocolat</h3>
+                            <span class="text-amber-600 font-bold text-lg">10€</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Cœur coulant au chocolat noir, glace vanille maison</p>
+                        <img src="http://static.photos/food/320x240/8" alt="Fondant" class="w-full h-40 object-cover rounded-lg">
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 transform hover:scale-105 transition duration-300">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Crème Brûlée</h3>
+                            <span class="text-amber-600 font-bold text-lg">9€</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Crème vanille traditionnelle, caramel croustillant</p>
+                        <img src="http://static.photos/food/320x240/9" alt="Crème Brûlée" class="w-full h-40 object-cover rounded-lg">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boissons -->
+            <div class="menu-category hidden" id="boissons">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Boissons</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Vin Rouge</h3>
+                        <p class="text-gray-600 mb-2">Bordeaux AOC</p>
+                        <span class="text-amber-600 font-bold">6€</span>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Vin Blanc</h3>
+                        <p class="text-gray-600 mb-2">Sancerre AOC</p>
+                        <span class="text-amber-600 font-bold">7€</span>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Eau Pétillante</h3>
+                        <p class="text-gray-600 mb-2">San Pellegrino</p>
+                        <span class="text-amber-600 font-bold">4€</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+</body>
+</html>
